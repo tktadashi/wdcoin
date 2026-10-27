@@ -1,0 +1,6 @@
+{
+  "name": "WD Coins",
+  "description": "Loja gamer de Poke Idle World, Mu Lorvath, Priston Tale e Aion 2 (Venda de Kinah).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

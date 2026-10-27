@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-grotesk: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========================================================
+   WD Coins - Design Tokens (CSS Variables)
+   Modo Escuro Premium (padrão) & Modo Claro Premium
+   ======================================================== */
+:root {
+  /* Modo Claro Premium Tokens */
+  --bg-main: #F5F3EF;
+  --bg-header: #FFFFFF;
+  --bg-surface: #ECE9E3;
+  --bg-card: #FFFFFF;
+  --border-color: #DDD8D1;
+  --text-primary: #202124;
+  --text-secondary: #68676D;
+  --accent-mauve: #80658F;
+  --accent-mauve-soft: #E9DFEE;
+  --btn-primary-bg: #25242A;
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #FFFFFF;
+  --btn-secondary-border: #D5D0C9;
+  --btn-secondary-text: #202124;
+  --whatsapp-color: #168B4B;
+  --whatsapp-hover: #12723D;
+  --status-success: #168B4B;
+  --status-success-bg: rgba(22, 139, 75, 0.08);
+  --status-success-border: rgba(22, 139, 75, 0.25);
+  --scrollbar-track: #ECE9E3;
+  --scrollbar-thumb: #D5D0C9;
+}
+
+[data-theme="dark"],
+.dark {
+  /* Modo Escuro Premium Tokens */
+  --bg-main: #111214;
+  --bg-header: #191A1E;
+  --bg-surface: #191A1E;
+  --bg-card: #1D1E23;
+  --border-color: #303036;
+  --text-primary: #F4F1EC;
+  --text-secondary: #AAA9B0;
+  --accent-mauve: #A78AB8;
+  --accent-mauve-soft: #C7B0D4;
+  --btn-primary-bg: #E7DED0;
+  --btn-primary-text: #202124;
+  --btn-secondary-bg: #191A1E;
+  --btn-secondary-border: #303036;
+  --btn-secondary-text: #F4F1EC;
+  --whatsapp-color: #25D366;
+  --whatsapp-hover: #20BD5A;
+  --status-success: #22C55E;
+  --status-success-bg: rgba(34, 197, 94, 0.1);
+  --status-success-border: rgba(34, 197, 94, 0.25);
+  --scrollbar-track: #15161A;
+  --scrollbar-thumb: #303036;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+  }
+}
+
+/* 1. Título principal (Hero): Space Grotesk 700 */
+.font-hero,
+h1.hero-title,
+[data-typography="hero-title"] {
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* 2. Títulos de seções: Space Grotesk 600 */
+.font-section-title,
+h2,
+[data-typography="section-title"] {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 600;
+}
+
+/* 3. Logo e nomes de jogos: Space Grotesk 700 */
+.font-logo,
+.font-game-name,
+[data-typography="brand-logo"],
+[data-typography="game-name"] {
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* 4. Menu e botões: Inter 600 */
+.font-menu-btn,
+button,
+[role="button"],
+nav a,
+nav button,
+[data-typography="button"],
+[data-typography="menu"] {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+}
+
+/* 5. Descrições e informações: Inter 400 */
+.font-description,
+.font-info,
+p,
+[data-typography="description"],
+[data-typography="info"] {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* 6. Preços e status de pedidos: Inter 600 */
+.font-price,
+.font-order-status,
+[data-typography="price"],
+[data-typography="order-status"] {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-mauve);
+}
